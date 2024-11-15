@@ -1,0 +1,31 @@
+.nav-tabs {
+	.nav-link {
+		color: var(--tblr-primary);
+		background-color: white;
+
+		&.active {
+			color: white;
+			background-color: var(--tblr-primary);
+		}
+	}
+}
+
+.dz-progress {
+	visibility: hidden !important;
+}
+
+.theme-dark {
+
+	.nav-tabs {
+
+		.nav-link {
+			color: var(--lqd-color-heading);
+			background-color: rgb(255 255 255 / 5%);
+
+			&.active {
+				color: white;
+				background-color: var(--tblr-primary);
+			}
+		}
+	}
+}

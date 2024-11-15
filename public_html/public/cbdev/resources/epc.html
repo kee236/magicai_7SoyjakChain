@@ -1,0 +1,74 @@
+<div class="bxc-box bxc-hide">
+    <div class="bxc-input">
+        <span id="bxc-title">Enter your Envato purchase code</span>
+        <input type="text" />
+    </div>
+    <p>
+        Please enter your <span id="bxc-addon-name"></span> Envato purchase code to enter the administration area. Restricted to one live domain, a testing secondary domain, or localhost.
+        Save the code in Settings > <span id="bxc-addon-setting"></span> Envato purchase code to hide this message permanently.
+        <a class="btn-text" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" rel="nofollow" target="_blank">Where is my purchase code?</a>
+    </p>
+    <div id="bxc-button" href="#" class="bxc-btn">Activate</div>
+</div>
+<style>
+    .bxc-input {
+        display: block;
+    }
+
+    .bxc-input > span {
+        display: block;
+        width: auto;
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #566069;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    p a {
+        color: #566069;
+    }
+
+    .bxc-hide {
+        display: none;
+    }
+</style>
+<script>
+    let body;
+    let button;
+    document.addEventListener('DOMContentLoaded', () => {
+        body = _query(document.body);
+        button = _query('.bxc-btn');
+        bxcvpc('auto');
+        body.on('click', '.bxc-btn', function () {
+            bxcvpc(_query('.bxc-input input').val().trim());
+        });
+        if (BXCEV) {
+            _query('#bxc-addon-name').html(BXCEV + ' add-on');
+            _query('#bxc-addon-setting').html(BXCEV);
+            _query('#bxc-title').html('Enter your ' + BXCEV + ' add-on Envato purchase code');
+        }
+    });
+    function bxcvpc(code) {
+        if (!code || BOXCoin.loading(button, 'check')) {
+            return;
+        }
+        button.addClass('bxc-loading');
+        BOXCoin.ajax('evc', { code: code, domain: BXC_URL, a: BXCEV }, (response) => {
+            if (response[0]) {
+                BOXCoin.cookie(BXCEV ? (BXCEV.toLowerCase() == 'exchange' ? 'EX_HHUVAR' : 'SH_UIXUJJ') : 'TR_VUUKMILO', response[1], 3650, 'set');
+                location.reload();
+            } else {
+                if (response[1]) {
+                    alert(response[1]);
+                }
+                button.removeClass('bxc-loading');
+                _query('.bxc-hide').removeClass('bxc-hide');
+            }
+        });
+    }
+
+</script>

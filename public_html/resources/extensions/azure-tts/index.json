@@ -1,0 +1,17 @@
+{
+    "extension_name": "Azure TTS",
+    "version": "1.0",
+    "controllers": [
+        "app/Services/Ai/TTS/AzureService.php"
+    ],
+    "route": "routes/automation.php",
+    "stubs": {
+        "feature_tts_azure.blade.php": "resources/views/default/panel/user/openai/components/feature_tts_azure.blade.php",
+        "azure-setting.blade.php": "resources/views/default/panel/admin/settings/particles/azure-setting.blade.php"
+    },
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    },
+    "delete_old_version_files": []
+}

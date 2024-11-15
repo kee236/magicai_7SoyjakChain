@@ -1,0 +1,14 @@
+{
+  "extension_name": "AI Voice Isolator",
+  "version": "1.0",
+  "controllers": [],
+  "route": null,
+  "stubs": [
+    "resources/views/default/panel/user/openai/components/generator_voice_isolator.blade.php"
+  ],
+  "migrations": {
+    "install": [],
+    "uninstall": []
+  },
+  "delete_old_version_files": []
+}

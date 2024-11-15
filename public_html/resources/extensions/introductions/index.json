@@ -1,0 +1,17 @@
+{
+    "extension_name": "Introductions",
+    "version": "1.2",
+    "controllers": [
+        "app/Http/Controllers/IntroductionController.php"
+    ],
+    "route": "routes/introduction_route.php",
+    "stubs": [
+        "resources/views/default/panel/admin/introduction/index.blade.php",
+        "resources/views/default/panel/admin/introduction/include/introduction.blade.php"
+    ],
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    },
+    "delete_old_version_files": []
+}

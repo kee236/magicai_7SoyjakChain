@@ -1,0 +1,19 @@
+{
+    "extension_name": "Flux AI",
+    "version": "1.3",
+    "controllers": [
+      "app/Http/Controllers/FalAi/FalAIWebhookController.php"
+    ],
+    "route": "routes/flux_pro.php",
+    "stubs": [
+      "resources/views/default/panel/user/openai/includes/flux-pro-script.blade.php",
+      "resources/views/default/panel/user/openai/includes/flux-pro-tab.blade.php",
+      "resources/views/default/panel/user/openai/includes/flux-pro-tab-body.blade.php",
+      "resources/views/default/panel/admin/settings/fal-ai-setting.blade.php"
+    ],
+    "migrations": {
+        "install": [],
+        "uninstall": []
+    },
+    "delete_old_version_files": []
+}
