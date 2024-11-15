@@ -1,0 +1,12 @@
+{
+  "extension_name": "Maintenance extension",
+  "version": "1.0",
+  "description": "Customize your maintenance messages, and control access for seamless updates.",
+  "controllers": [
+    "app/Http/Controllers/Common/MaintenanceController.php"
+  ],
+  "route": "routes/maintenance.php",
+  "stubs": [
+    "resources/views/default/panel/admin/common/maintenance.blade.php"
+  ]
+}

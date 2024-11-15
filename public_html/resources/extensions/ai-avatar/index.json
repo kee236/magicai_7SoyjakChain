@@ -1,0 +1,21 @@
+{
+  "extension_name": "AI Avatar",
+  "version": "1.4",
+  "controllers": [
+    "app/Services/Synthesia/Traits/Synthesia.php",
+    "app/Services/Synthesia/SynthesiaService.php",
+    "app/Http/Controllers/SynthesiaController.php"
+  ],
+  "route": "routes/ai_avatar.php",
+  "stubs": [
+    "resources/views/default/panel/user/synthesia/index.blade.php",
+    "resources/views/default/panel/user/synthesia/create.blade.php",
+    "resources/views/default/panel/user/synthesia/videos-list.blade.php",
+    "resources/views/default/panel/user/synthesia/video-item.blade.php"
+  ],
+  "migrations": {
+    "install": [],
+    "uninstall": []
+  },
+  "delete_old_version_files": []
+}

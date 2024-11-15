@@ -1,0 +1,63 @@
+{
+    "extension_name": "AI Web Chat",
+    "version": "1.0",
+    "controllers": [
+        "app/Http/Controllers/AIWebChatController.php"
+    ],
+    "route": "routes/webchat_route.php",
+    "stubs": [
+        "resources/views/default/components/navbar/extnavbars/webchat_header.blade.php",
+        "resources/views/default/panel/user/openai_chat/components/webchat_sidebar.blade.php",
+        "resources/views/default/panel/user/openai_chat/components/webchat_sidebar_list.blade.php",
+        "resources/views/default/panel/user/openai_chat/components/webchat_area_container.blade.php",
+        "resources/views/default/panel/user/openai_chat/components/empty_webchat_area_container.blade.php",
+        "public/themes/default/assets/js/panel/openai_webchat.js",
+        "resources/views/default/panel/user/openai_chat/webchat.blade.php",
+        "resources/views/default/panel/user/openai_chat/components/webchat_area.blade.php",
+        "public/themes/default/assets/img/webchat.png"
+    ],
+    "migrations": {
+        "install": [
+            {
+                "condition": {
+                    "table": "openai"
+                },
+                "path": "install/install.sql"
+            },
+            {
+                "condition": {
+                    "table": "user_openai_chat",
+                    "column": "website_url"
+                },
+                "path": "install/alter.sql"
+            }
+        ],
+        "uninstall": [
+            {
+                "condition": {
+                    "table": "openai"
+                },
+                "path": "uninstall/uninstall.sql"
+            },
+            {
+                "condition": {
+                    "table": "user_openai_chat",
+                    "column": "website_url"
+                },
+                "path": "uninstall/alter.sql"
+            }
+        ]
+    },
+    "delete_old_version_files": [
+        "resources/views/panel/user/openai_chat/components/webchat_sidebar.blade.php",
+        "resources/views/panel/user/openai_chat/components/webchat_sidebar_list.blade.php",
+        "resources/views/panel/user/openai_chat/components/webchat_area_container.blade.php",
+        "resources/views/panel/user/openai_chat/components/empty_webchat_area_container.blade.php",
+        "public/assets/js/panel/openai_webchat.js",
+        "public/assets/js/panel/openai_webchat_low.js",
+        "app/Http/Controllers/AIWebChatController.php",
+        "resources/views/panel/user/openai_chat/webchat.blade.php",
+        "resources/views/panel/user/openai_chat/components/webchat_area.blade.php",
+        "public/assets/img/webchat.png"
+    ]
+}

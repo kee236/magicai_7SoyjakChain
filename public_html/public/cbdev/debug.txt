@@ -1,0 +1,1 @@
+Boxcoin error [bxc_transactions_check]: Transaction 6 not found.

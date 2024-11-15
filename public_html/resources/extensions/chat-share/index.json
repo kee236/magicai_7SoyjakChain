@@ -1,0 +1,15 @@
+{
+    "extension_name": "Chat Share",
+    "version": "1.0",
+    "controllers": [
+        "app/Http/Controllers/ShareController.php",
+        "app/Models/ShareLink.php"
+    ],
+    "route": null,
+    "stubs": [
+        "resources/views/default/panel/user/openai_chat/includes/share-button-include.blade.php",
+        "resources/views/default/panel/user/openai_chat/includes/share-script-include.blade.php",
+        "resources/views/default/share/index.blade.php"
+    ],
+    "migrations": {}
+}

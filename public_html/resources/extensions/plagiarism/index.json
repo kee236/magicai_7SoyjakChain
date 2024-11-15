@@ -1,0 +1,53 @@
+{
+    "extension_name": "AI Plagiarism and Content Detector",
+    "version": "1.0",
+    "controllers": [
+        "app/Http/Controllers/PlagiarismController.php"
+    ],
+    "route": "routes/plagiarism_route.php",
+    "stubs": [
+        "resources/views/default/components/navbar/extnavbars/plagiarism_header.blade.php",
+        "resources/views/default/components/navbar/extsettingnavbars/plagiarism_nav.blade.php",
+        "resources/views/default/panel/user/openai/plagiarism/index.blade.php",
+        "resources/views/default/panel/admin/settings/plagiarism_setting.blade.php",
+        "resources/views/default/panel/user/openai/detectaicontent/index_detectaicontent.blade.php"
+    ],
+    "migrations": {
+        "install": [
+            {
+                "condition": {
+                    "table": "openai"
+                },
+                "path": "install/install.sql"
+            },
+            {
+                "condition": {
+                    "table": "settings_two",
+                    "column": "plagiarism_key"
+                },
+                "path": "install/alter.sql"
+            }
+        ],
+        "uninstall": [
+            {
+                "condition": {
+                    "table": "openai"
+                },
+                "path": "uninstall/uninstall.sql"
+            },
+            {
+                "condition": {
+                    "table": "settings_two",
+                    "column": "plagiarism_key"
+                },
+                "path": "uninstall/alter.sql"
+            }
+        ]
+    },
+    "delete_old_version_files": [
+        "resources/views/default/components/navbar/extsettingnavbars/plagiarism.blade.php",
+        "resources/views/default/panel/user/openai/plagiarism/index.blade.php",
+        "resources/views/default/panel/admin/settings/plagiarism.blade.php",
+        "resources/views/default/panel/user/openai/detectaicontent/index.blade.php"
+    ]
+}

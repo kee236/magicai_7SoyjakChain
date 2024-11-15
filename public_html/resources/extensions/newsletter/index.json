@@ -1,0 +1,11 @@
+{
+    "extension_name": "NewsLetter function",
+    "version": "1.0",
+    "controllers": [
+        "app/Http/Controllers/NewsLetterController.php"
+    ],
+    "route": "routes/newsletter_route.php",
+    "stubs": [],
+    "delete_old_version_files": [
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "extension_name": "Chat Setting",
+    "version": "2.2",
+    "controllers": [
+        "app/Http/Controllers/User/ChatTemplateController.php",
+        "app/Http/Controllers/User/ChatCategoryController.php",
+        "app/Http/Controllers/User/Chatbot/ChatbotController.php",
+        "app/Http/Controllers/User/Chatbot/ChatbotTrainingController.php"
+    ],
+    "route": "routes/chat_setting_route.php",
+    "stubs": {
+        "chat_setting_header.blade.php": "resources/views/default/components/navbar/extnavbars/chat_setting_header.blade.php",
+        "chat_category_form.blade.php": "resources/views/default/panel/user/chat/category/form.blade.php",
+        "chat_category_index.blade.php": "resources/views/default/panel/user/chat/category/index.blade.php",
+        "chat_template_index.blade.php": "resources/views/default/panel/user/chat/template/index.blade.php",
+        "chat_template_form.blade.php": "resources/views/default/panel/user/chat/template/form.blade.php",
+        "chat_chatbot_form.blade.php": "resources/views/default/panel/user/chat/chatbot/form.blade.php",
+        "chat_chatbot_index.blade.php": "resources/views/default/panel/user/chat/chatbot/index.blade.php",
+        "chat_chatbot_setting.blade.php": "resources/views/default/panel/user/chat/chatbot/setting.blade.php",
+        "chat_chatbot_status.blade.php": "resources/views/default/panel/user/chat/chatbot/status.blade.php",
+        "chat_chatbot_training.blade.php": "resources/views/default/panel/user/chat/chatbot/training.blade.php",
+        "chat_chatbot_particles_pdf_tab.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/pdf-tab.blade.php",
+        "chat_chatbot_particles_qa_tab.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/qa-tab.blade.php",
+        "chat_chatbot_particles_text_tab.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/text-tab.blade.php",
+        "chat_chatbot_particles_web_site_tab.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/web-site-tab.blade.php",
+        "chat_chatbot_particles_pdf_tab_list.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/pdf/list.blade.php",
+        "chat_chatbot_particles_qa_tab_list.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/qa/list.blade.php",
+        "chat_chatbot_particles_text_tab_list.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/text/list.blade.php",
+        "chat_chatbot_particles_web_site_tab_crawler.blade.php": "resources/views/default/panel/user/chat/chatbot/particles/web-site/crawler.blade.php"
+    },
+    "migrations": {},
+    "delete_old_version_files": []
+}
